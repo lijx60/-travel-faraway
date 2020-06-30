@@ -5,7 +5,11 @@ int fputc(int ch, FILE *f)
       return ch;
 }
 
-
+void delay_us(unsigned int us)
+{
+    u8 n;           
+    while(us--)for(n=0;n<CLOCK;n++);     
+}
 
 int fputc(int ch, FILE *f)
 {
