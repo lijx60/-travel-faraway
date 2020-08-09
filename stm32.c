@@ -6,7 +6,7 @@ int fputc(int ch, FILE *f)
 }
 
 
-uint16_t HAL_GetTick_us(void)
+uint16_t HAL_GetTick_us(void)  //把uwTick增量的功能改到别的定时器
 {
  //返回寄存器值，这里先假设定时器2，要按具体情况定
    return  __HAL_TIM_GET_COUNTER(&htim2);
